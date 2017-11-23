@@ -1,0 +1,24 @@
+<!--logs.wxml-->
+<cinema-view>
+  <view class='top'>
+    <view class='position'>
+      <text>太原</text>
+    </view>
+    <view class='search'>
+      <view><icon type='search' size='18' />找影视剧、影院</view>
+    </view>
+  </view>
+  <view class="main">
+    <view wx:for="{{cinema}}" wx:key="{{index}}">
+      <view class="cinema" wx:for="{{item}}" wx:for-item="i" wx:key="{{index}}" bindtap="bindCinema" data-id="{{i.id}}">
+        <text class="nm">{{i.nm}}</text>
+        <text class="price">{{i.sellPrice}}<text style="font-size:12px;">元起</text></text>
+        <view class="addr">{{i.addr}}</view>
+        <view class="seat">座</view>
+        <view class="seat" wx-if="{{i.imax}}">IMAX</view>
+        <view class="area">3.7km</view>
+      </view>
+    </view>
+  </view>
+</cinema-view>
+

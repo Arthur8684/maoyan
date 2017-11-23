@@ -1,0 +1,67 @@
+/*top*/
+.top{
+	padding:10px;
+	display: flex;
+	font-size: 16px;
+}
+
+.top .position{
+	margin-right: 20px;
+	vertical-align: bottom;
+	padding:3px 0;
+}
+.top .search{
+	background-color: #fff;
+	padding:3px 0;
+	flex:1;
+	text-align: center;
+	color:#999;
+}
+.top .search icon{
+	position: relative;
+	top:-2px;
+	left:-2px;
+}
+/*
+--------------
+main  影院信息
+--------------
+*/
+.main{
+  background: #fff;
+  font-size: 12px;
+}
+.main .cinema{
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+.main .cinema .nm{
+  font-size: 16px;
+}
+.main .cinema .price{
+  display: inline-block;
+  font-size: 16px;
+  color: #e54847;
+  margin-left: 10px;
+  letter-spacing: 1px;
+}
+.main .cinema .addr{
+  width:80%;
+  color:#999;
+}
+.main .cinema .seat{
+  margin-top: 6px;
+  display: inline-block;
+  border: 1px solid #589DAF;
+  color: #589DAF;
+  border-radius: 4px;
+  padding: 0 2px;
+  margin-right: 4px;
+}
+.main .cinema .area{
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  color: #999;
+}

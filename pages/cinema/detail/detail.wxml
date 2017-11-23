@@ -1,0 +1,52 @@
+<!--pages/cinema/detail/detail.wxml-->
+<scroll-view class="cinema" scroll-y="true">
+    <view class="top">
+        <view class="nm">
+            {{title.nm}}
+        </view>
+        <view class="addr">
+            {{title.addr}}
+        </view>
+    </view>
+    <!--打开地图获取影院位置-->
+    <view class="map" bindtap="openLocation" data-lat="{{title.lat}}" data-lng="{{title.lng}}" data-nm="{{title.nm}}" data-addr="{{title.addr}}">
+        <image src="../../../img/map.png"></image>
+    </view>
+    <view style="clear:both;"></view>
+    <view class="bg">
+        <view class="list" style='background-image: url("{{bg}}");'></view>
+        <view class="img" style="left:-{{left}}px">
+            <image bindtap="move" data-bg="{{item.img}}" data-len="{{film}}" wx:for="{{film}}" wx:key='{{index}}' data-index="{{index}}" data-cid="{{id}}" data-id="{{item.id}}" src="{{item.img}}"></image>
+        </view>
+    </view>
+    <view class="title">
+        <view class="nm">
+            {{movieTitle.nm}}
+            <text class="sc" wx:if="{{movieTitle.sc}}">{{movieTitle.sc}}分</text>
+        </view>
+        <view class="title-detail">
+            <text wx:if="{{movieTitle.dur}}">{{movieTitle.dur}}分钟|</text>
+            <text wx:if="{{movieTitle.cat}}">{{movieTitle.cat}}|</text>
+            <text wx:if="{{movieTitle.star}}">{{movieTitle.star}}</text>
+        </view>
+    </view>
+    <view class="dateshow">
+        <view class="time">
+            <view class="date" wx:for="{{dates}}" wx:key='{{index}}' bindtap="timeList" data-index="{{item.slug}}">
+                {{item.text}}
+            </view>
+        </view>
+        <view class="tm-list" wx:for="{{list}}" wx:key="{{index}}">
+            <view class="sp">
+                <view class="tm black">{{item.tm}}</view>
+                <view>{{item.end}}散场</view>
+            </view>
+            <view class="sp lang">
+                <view class="black">{{item.lang}}<text>{{item.tp}}</text></view>
+                <view>{{item.th}}</view>
+            </view>
+            <button class="ticket" size="mini" type="warn" wx:if="{{sell}}==true">购票</button>
+            <button class="ticket" size="mini" disabled="true" wx:else>停售</button>
+        </view>
+    </view>
+</scroll-view>

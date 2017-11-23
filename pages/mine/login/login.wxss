@@ -1,0 +1,68 @@
+/* pages/mine/login/login.wxss */
+.login{
+    font-size: 14px;
+}
+.bg{
+    background: white;
+}
+.login-title{
+    font-size: 12px;
+    border-bottom: 1px solid #e6e6e6; 
+    border-collapse: collapse;
+}
+.login-title .tab-list{
+    display: inline-block;
+    width: 50%;
+    line-height: 50px;
+    text-align: center;
+}
+.login-title .on{
+    color: red;
+    border-bottom: 1px solid red;
+}
+.inp{
+    height: 82px;
+}
+.inp view{
+    border-bottom: 1px solid #e6e6e6;
+}
+.inp swiper-item view .tab-user{
+    position: relative;
+    line-height: 40px;
+    left: 10px;
+}
+.inp swiper-item view .user{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+.inp swiper-item view .tab-pass{
+    position: relative;
+    line-height: 40px;
+    left: 10px;
+}
+.inp swiper-item view .pass{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+.inp swiper-item view .call{
+    left: 60px;
+}
+.place{
+    font-size: 12px;
+    color: #ccc;
+}
+.but{
+    padding: 30px 10px 0 10px;
+}
+.info{
+    text-align: center;
+    margin-top: 50px;
+   
+}
+.info .info-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

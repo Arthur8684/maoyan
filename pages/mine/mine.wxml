@@ -1,0 +1,13 @@
+<!-- mine.wxml -->
+<scroll-view class="my">
+    <view class="vip bg">
+        <view bindtap="bindlogin">我的订单<text>></text></view>
+        <view bindtap="bindlogin">优惠券<text>></text></view>
+        <view bindtap="bindlogin">影视会员卡<text>></text></view>
+    </view>
+    <view class="movie bg">
+        <view bindtap="bindlogin">想看的电影<text>></text></view>
+        <view bindtap="bindlogin">看过的电影<text>></text></view>
+    </view>
+    <view class="call">侵权请联系QQ:<text>2040045433</text></view>
+</scroll-view>

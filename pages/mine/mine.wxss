@@ -1,0 +1,36 @@
+/* pages/mine/mine.wxss */
+.my{
+    font-size: 14px;
+    line-height: 40px;
+    padding-top: 10px;
+}
+.bg{
+    background: white;
+    border-top: 1px solid #e6e6e6;
+}
+.my .bg view:last-child{
+    border-bottom: none;
+}
+.my view{
+    border-bottom: 1px solid #e6e6e6;
+    text-indent: 10px;
+}
+.bg view text{
+    color: #ccc;
+    font-weight: 900;
+    float: right;
+    margin-right: 10px;
+}
+.my .movie{
+    margin-top:14px;
+}
+.call{
+    border: none !important;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.call text{
+    color:orange;
+}

@@ -1,0 +1,27 @@
+<!--pages/mine/login/login.wxml-->
+<scroll-view class="login">
+    <view class="login-title bg">
+        <text bindtap="swichNav" class="tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0">账号密码登录</text>
+        <text bindtap="swichNav" class="tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1">手机快捷登录</text>
+    </view>
+    <swiper class="inp bg" current="{{currentTab}}" duration="500" bindchange="bindChange">
+        <swiper-item>
+            <view><text class="tab-user">账号</text><input class="user" placeholder="请输入手机号" placeholder-class="place" /></view>
+            <view><text class="tab-pass">密码</text><input class="pass" placeholder="请输入密码" placeholder-class="place" /></view>
+        </swiper-item>
+        <swiper-item>
+            <view><text class="tab-user">手机号</text><input class="user call" placeholder="请输入手机号" placeholder-class="place" /></view>
+            <view><text class="tab-pass">验证码</text><input class="pass call" placeholder="请输入密码" placeholder-class="place" /></view>
+        </swiper-item>
+    </swiper>
+    <view class="but">
+        <button type="warn" disabled="true">登录</button>
+    </view>
+    <view class="info">
+        <image class="info-img" wx:if="{{!up}}" src="{{user.avatarUrl}}" bindtap="upload"></image>
+        <image class="info-img" wx:else src="{{up}}" bindtap="upload"></image>
+        <view class="classname">
+            <view>{{user.nickName}}</view>
+        </view>
+    </view>
+</scroll-view>
